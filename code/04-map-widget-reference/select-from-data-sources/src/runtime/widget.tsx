@@ -4,7 +4,11 @@ import { IMConfig } from '../config';
 import defaultMessages from './translations/default'
 import { JimuMapViewComponent, JimuMapView } from "jimu-arcgis";
 
-export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, any> {
+interface IState {
+  jimuMapView: JimuMapView;
+}
+
+export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, IState> {
   state = {
     jimuMapView: null
   };
@@ -14,7 +18,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
       this.setState({
         jimuMapView: jmv
       });
-
     }
   };
 
