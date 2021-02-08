@@ -26,8 +26,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
       <div className="widget-demo jimu-widget m-2">
         <p><FormattedMessage id="pleaseSelect" defaultMessage={defaultMessages.pleaseSelect} /></p>
 
-        <p>{this.state.jimuMapView && this.state.jimuMapView.view.map.layers.map(x => x.id)}</p>
-
         {this.props.hasOwnProperty("useMapWidgetIds") &&
           this.props.useMapWidgetIds &&
           this.props.useMapWidgetIds.length === 1 && (
